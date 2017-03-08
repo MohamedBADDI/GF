@@ -1,7 +1,65 @@
 {% extends "::base.html.twig" %}
 
-{% block title %}FormationBundle:Etudiant:afficherEtudiant{% endblock %}
+{% block title %}Liste des étudiants{% endblock %}
 
 {% block body %}
-<h1>Welcome to the Etudiant:afficherEtudiant page</h1>
+    <section class="pt-50">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="title">
+                        <h1>Liste des étudiants</h1>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="button_add">
+                            <a  class="add_etd" href="{{ path('ajouter_etudiant') }}">
+                                Ajouter un étudiant
+                            </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="content">
+                    <table class="table table-hover table-inverse table-responsive">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>CIN</th>
+                            <th>Nom</th>
+                            <th>Prenom</th>
+                            <th>Date de naissance</th>
+                            <th>Adresse</th>
+                            <th>Telephone</th>
+                            <th>Email</th>
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            {% for etudiant in etudiants %}
+                                <td>{{ etudiant.id }}</td>
+                                <td>{{ etudiant.cIN }}</td>
+                                <td>{{ etudiant.nom }}</td>
+                                <td>{{ etudiant.prenom }}</td>
+                                <td>{% if etudiant.dateNaissance %}{{ etudiant.dateNaissance|date('Y-m-d') }}{% endif %}</td>
+                                <td>{{ etudiant.adresse }}</td>
+                                <td>{{ etudiant.telephone }}</td>
+                                <td>{{ etudiant.email }}</td>
+                                <td><a href="{{ path('modifier_etudiant', { 'id': etudiant.id }) }}">Modifier</a></td>
+
+                            {% endfor %}
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
 {% endblock %}

@@ -8,6 +8,7 @@ class EtudiantController extends Controller
 {
     public function ajouterEtudiantAction()
     {
+        
         return $this->render('FormationBundle:Etudiant:ajouter_etudiant.html.twig', array(
             // ...
         ));
@@ -29,8 +30,11 @@ class EtudiantController extends Controller
 
     public function afficherEtudiantAction()
     {
+        $re = $this->getDoctrine()->getRepository('FormationBundle:etudiants');
+        $etd = $re->findAll();
+
         return $this->render('FormationBundle:Etudiant:afficher_etudiant.html.twig', array(
-            // ...
+            'etudiants'=>$etd
         ));
     }
 

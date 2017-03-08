@@ -1,23 +1,29 @@
 formation_homepage:
-    path:     /
+    path:     /formation
     defaults: { _controller: FormationBundle:Default:index }
 
 ajouter_etudiant:
-    path:     /ajouterEtudiant
+    path:     /Etudiant/ajouterEtudiant
     defaults: { _controller: FormationBundle:Etudiant:ajouterEtudiant }
 
 modifier_etudiant:
-    path:     /modiferEtudiant/{id}
+    path:     /Etudiant/modiferEtudiant/{id}
     defaults: { _controller: FormationBundle:Etudiant:modifierEtudiant }
+    requirements:
+            id: \d+
 
 supprimer_etudiant:
-    path:     /supprimerEtudiant/{id}
+    path:     /Etudiant/supprimerEtudiant/{id}
     defaults: { _controller: FormationBundle:Etudiant:supprimerEtudiant }
+    requirements:
+            id: \d+
 
 afficher_etudiant:
-    path:     /afficherEtudiant
+    path:     /Etudiant/
     defaults: { _controller: FormationBundle:Etudiant:afficherEtudiant }
 
 affecter_etudiant:
-    path:     /affecterEtudiant/{id}
+    path:     /Etudiant/affecterEtudiant/{id}
     defaults: { _controller: FormationBundle:Etudiant:affecterEtudiant }
+    requirements:
+            id: \d+
