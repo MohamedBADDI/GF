@@ -23,3 +23,29 @@ a.add_etd:hover {
     color: #fff;
     background-color:#0275d8;
 }
+
+button.button_add {
+    background: #0275d8;
+    line-height: 40px;
+    padding: 0 40px;
+    text-align: center;
+    position: relative;
+    color: #fff;
+    border: 1px solid #0275d8;
+    float: right;
+    -webkit-transition: 0.2s ease-out all;
+    -moz-transition: 0.2s ease-out all;
+    -ms-transition: 0.2s ease-out all;
+    -o-transition: 0.2s ease-out all;
+    transition: 0.2s ease-out all;
+    cursor: pointer;
+}
+
+button#form_ajouter:hover {
+    background: #fff;
+    color: #0275d8;
+}
+
+.form-control{
+    padding: .5rem .75rem !important;
+}

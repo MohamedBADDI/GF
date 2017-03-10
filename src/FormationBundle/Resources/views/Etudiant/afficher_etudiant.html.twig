@@ -39,10 +39,11 @@
                         </tr>
                         </thead>
                         <tbody>
+                        {% for etudiant in etudiants %}
                         <tr>
-                            {% for etudiant in etudiants %}
+
                                 <td>{{ etudiant.id }}</td>
-                                <td>{{ etudiant.cIN }}</td>
+                                <td>{{ etudiant.cin }}</td>
                                 <td>{{ etudiant.nom }}</td>
                                 <td>{{ etudiant.prenom }}</td>
                                 <td>{% if etudiant.dateNaissance %}{{ etudiant.dateNaissance|date('Y-m-d') }}{% endif %}</td>
@@ -51,8 +52,9 @@
                                 <td>{{ etudiant.email }}</td>
                                 <td><a href="{{ path('modifier_etudiant', { 'id': etudiant.id }) }}">Modifier</a></td>
 
-                            {% endfor %}
+
                         </tr>
+                        {% endfor %}
 
                         </tbody>
                     </table>

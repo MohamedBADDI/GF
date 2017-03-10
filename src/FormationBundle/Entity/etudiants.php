@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="etudiants")
  * @ORM\Entity(repositoryClass="FormationBundle\Repository\etudiantsRepository")
  */
-class etudiants
+class Etudiants
 {
     /**
      * @var int
@@ -85,7 +85,7 @@ class etudiants
      * Set cin
      *
      * @param string $cin
-     * @return etudiants
+     * @return Etudiants
      */
     public function setCin($cin)
     {
@@ -108,7 +108,7 @@ class etudiants
      * Set nom
      *
      * @param string $nom
-     * @return etudiants
+     * @return Etudiants
      */
     public function setNom($nom)
     {
@@ -131,7 +131,7 @@ class etudiants
      * Set prenom
      *
      * @param string $prenom
-     * @return etudiants
+     * @return Etudiants
      */
     public function setPrenom($prenom)
     {
@@ -154,7 +154,7 @@ class etudiants
      * Set dateNaissance
      *
      * @param \DateTime $dateNaissance
-     * @return etudiants
+     * @return Etudiants
      */
     public function setDateNaissance($dateNaissance)
     {
@@ -177,7 +177,7 @@ class etudiants
      * Set adresse
      *
      * @param string $adresse
-     * @return etudiants
+     * @return Etudiants
      */
     public function setAdresse($adresse)
     {
@@ -200,7 +200,7 @@ class etudiants
      * Set telephone
      *
      * @param string $telephone
-     * @return etudiants
+     * @return Etudiants
      */
     public function setTelephone($telephone)
     {
@@ -223,7 +223,7 @@ class etudiants
      * Set email
      *
      * @param string $email
-     * @return etudiants
+     * @return Etudiants
      */
     public function setEmail($email)
     {
